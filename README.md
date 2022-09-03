@@ -1,1 +1,2 @@
 # maze-game
+JavaScript DOM
