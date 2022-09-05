@@ -44,5 +44,31 @@ window.addEventListener("load", function () {
         });
     }
     
-    
+    // function level() {
+    //     const myInterval = setInterval(lost, 1000);
+    //     clearInterval(myInterval);
+    // }
+
+
+    // Win function for the end div
+    function win() {
+        score += 5
+        boundaries.forEach(boundary => {
+            boundary.setAttribute('style', 'background-color: #eeeeee;');
+        })
+        status.innerHTML = "You Win! Score: " + score
+    }
+    // Lost function for the end div
+    function lost() {
+        // No negative scores
+        if (score > 10) {
+            score -= 10
+        }
+
+        boundaries.forEach(boundary => {
+            boundary.setAttribute('style', 'background-color: #ff8888;');
+
+        })
+        status.innerHTML = "You Lost! Score: " + score
+    }
 })
